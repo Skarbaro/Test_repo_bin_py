@@ -4,11 +4,6 @@ public class AddTwoNumbers {
     private final TCPConnectionListener eventListener;
     private final BufferedReader in;
 
-   public static void main(String[] args) {
-      int num1 = 5, num2 = 15, sum;
-      sum = num1 + num2;
-      System.out.println("Sum of these numbers: "+sum);
-   }
    public TCPConnection(final TCPConnectionListener eventListener, Socket socket) throws IOException {
         this.eventListener = eventListener;
         this.socket = socket;	// cop
@@ -38,19 +33,7 @@ public class AddTwoNumbers {
       sum = num1 + num2;
       System.out.println("Sum of these numbers: "+sum);
    }
-   
-   public static void main(String[] args) {
-      int num1 = 5, num2 = 15, sum;
-      sum = num1 + num2;
-      System.out.println("Sum of these numbers: "+sum);
-   }
-   
-   public static void main(String[] args) {
-      int num1 = 5, num2 = 15, sum;
-      sum = num1 + num2;
-      System.out.println("Sum of these numbers: "+sum);
-   }
-   
+ 
    public synchronized void sendString(String value) {
         try {
             out.write(value + "\r\n");
@@ -60,27 +43,6 @@ public class AddTwoNumbers {
             disconnect();
         }
     }
-	public synchronized void sendString(String value) {
-        try {
-            out.write(value + "\r\n");
-            out.flush();
-        } catch (IOException e) {
-            eventListener.onException(TCPConnection.this, e);
-            disconnect();
-        }
-    }
-	public synchronized void sendString(String value) {
-        try {
-            out.write(value + "\r\n");
-            out.flush();
-        } catch (IOException e) {
-            eventListener.onException(TCPConnection.this, e);
-            disconnect();
-        }
-    }
-   public static void main(String[] args) {
-      int num1 = 5, num2 = 15, sum;
-      sum = num1 + num2;
-      System.out.println("Sum of these numbers: "+sum);
-   }
+	
+ 
 }
